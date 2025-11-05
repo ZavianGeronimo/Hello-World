@@ -5,7 +5,7 @@
 #include <fstream>
 
 using namespace std;
-
+//Calculation
 class Stats {
 public:
     int n1, n2, n3, n4;
@@ -22,7 +22,7 @@ double getStdDev() {
 
 }
 };
-
+//Main code
 int main() {
     Stats s;
     int choice;
@@ -30,7 +30,7 @@ int main() {
     cout << "1 - File input" << endl;
     cout << "2 - User input" << endl;
     cin >> choice;
-
+//User picks 1 
     if (choice == 1) {
         ifstream inFile;
         inFile.open("inMeanStd.dat");
@@ -49,6 +49,7 @@ int main() {
         outFile << "Standard Deviation: " << s.getStdDev() << endl;
         outFile.close();
     }
+    // User picks 2
     else if (choice == 2) {
         cout << "Enter 4 intergers:";
         cin >> s.n1 >> s.n2 >> s.n3 >> s.n4;
